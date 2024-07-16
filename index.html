@@ -7,13 +7,15 @@
     <title>Wunderlust Travel</title>
   </head>
   <body>
+    <div class="skip"><a href="#destinations">Skip to Main</a></div>
     <header>
       <!--Make logo in multiple sizes-->
-      <!-- <picture>
-        <source srcset="" media="(max-width: 320px)" />
-        <source srcset="" media="(max-width: 780px)" />
-        <source srcset="" media="(max-width: 1024px)" />
-      </picture> -->
+      <picture>
+        <source srcset="images/logo-L.png" media="(min-width: 1024px)" />
+        <source srcset="images/logo-M.png" media="(min-width: 780px)" />
+        <source srcset="images/logo-S.png" media="(min-width: 320px)" />
+        <img src="images/logo-L.png" alt="responsive logo" />
+      </picture>
       <h1>Let Wunderlust help you plan the trip of your dreams!</h1>
     </header>
     <nav>
@@ -25,22 +27,31 @@
       </ul>
     </nav>
     <!--Next section-->
-    <main>
-      <section id="destinations">
-        <h2>Majorca</h2>
-        <p>
-          Imagine an island with turquoise blue waters, secret coves, soft
-          golden sands, lush green foliage, rugged mountains, picturesque
-          villages and a vibrant capital city. The island and its capital,
-          Palma, are overflowing with character, while its beaches are famous
-          all around the world, making it one of the most sought-after summer
-          destinations.
-        </p>
-        <!--Make images in multiple sizes-->
-        <!-- <img src="images/majorca-waves-L.png" alt="majorca waves" />
-        <img src="images/majorca-beach-L.png" alt="majorca beach" />
-        <img src="images/majorca-cove-L.png" alt="majorca cove" /> -->
-      </section>
+    <main id="destinations">
+      <h2>Majorca</h2>
+      <p>
+        Imagine an island with turquoise blue waters, secret coves, soft golden
+        sands, lush green foliage, rugged mountains, picturesque villages and a
+        vibrant capital city. The island and its capital, Palma, are overflowing
+        with character, while its beaches are famous all around the world,
+        making it one of the most sought-after summer destinations.
+      </p>
+      <!--Make images in multiple sizes-->
+      <picture>
+        <source
+          srcset="images/majorca-waves-L.png"
+          media="(min-width: 1024px)"
+        />
+        <source
+          srcset="images/majorca-waves-M.png"
+          media="(min-width: 780px)"
+        />
+        <source
+          srcset="images/majorca-waves-S.png"
+          media="(min-width: 320px)"
+        />
+        <img src="images/majorca-waves-L.png" alt="responsive image" />
+      </picture>
       <section id="inspirations">
         <h2>Plan Your Trip</h2>
         <article>
@@ -62,8 +73,7 @@
               d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z"
             />
           </svg>
-
-          (href=”#”) (title=”Search for flights”)
+          <!-- (href=”#”) (title=”Search for flights”) -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-chevron-right"
@@ -99,7 +109,7 @@
             <circle cx="7" cy="10" r="1" />
           </svg>
 
-          (href=”#”) (title=”Search for Hotels”)
+          <!-- (href=”#”) (title=”Search for Hotels”) -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-chevron-right"
@@ -138,8 +148,7 @@
             <path d="M11 12h7l-7 -9v9" />
             <line x1="8" y1="7" x2="6" y2="12" />
           </svg>
-
-          (href=”#”) (title=”Search for Activities”)
+          <!-- (href=”#”) (title=”Search for Activities”) -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-chevron-right"
@@ -175,8 +184,7 @@
               d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3"
             />
           </svg>
-
-          (href=”#”) (title=”Search for Restaurants”)
+          <!-- (href=”#”) (title=”Search for Restaurants”) -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-chevron-right"
@@ -199,7 +207,21 @@
         <article>
           <h3>Miranda Blake</h3>
           <!--Make images in multiple sizes-->
-          <img src="images/miranda-blake-L.png" alt="miranda blake" />
+          <picture>
+            <source
+              srcset="images/miranda-blake-L.png"
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="images/miranda-blake-M.png"
+              media="(min-width: 780px)"
+            />
+            <source
+              srcset="images/miranda-blake-S.png"
+              media="(min-width: 320px)"
+            />
+            <img src="images/miranda-blake-L.png" alt="responsive pic" />
+          </picture>
           <p>
             Traveling From: London, England “I traveled here for business, but
             my stay was extended. Now it is my home.”
@@ -208,7 +230,21 @@
         <article>
           <h3>Max Winter</h3>
           <!--Make images in multiple sizes-->
-          <img src="images/max-winter-L.png" alt="max winter" />
+          <picture>
+            <source
+              srcset="images/max-winter-L.png"
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="images/max-winter-M.png"
+              media="(min-width: 780px)"
+            />
+            <source
+              srcset="images/max-winter-S.png"
+              media="(min-width: 320px)"
+            />
+            <img src="images/max-winter-L.png" alt="responsive pic" />
+          </picture>
           <p>
             Traveling From: Berlin, Germany “Great escape from my reality.
             Beautiful sunsets, wonderful people, great beer. ”
@@ -217,7 +253,21 @@
         <article>
           <h3>Inés Villegoes</h3>
           <!--Make images in multiple sizes-->
-          <img src="images/ines-villegoes-L.png" alt="inés villegoes" />
+          <picture>
+            <source
+              srcset="images/ines-villegoes-L.png"
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="images/ines-villegoes-M.png"
+              media="(min-width: 780px)"
+            />
+            <source
+              srcset="images/ines-villegoes-S.png"
+              media="(min-width: 320px)"
+            />
+            <img src="images/ines-villegoes-L.png" alt="responsive pic" />
+          </picture>
           <p>
             Traveling From: Barcelona, Spain “A very safe environment for all
             travelers.”
@@ -226,7 +276,21 @@
         <article>
           <h3>Carmen Lorenzo</h3>
           <!--Make images in multiple sizes-->
-          <img src="images/carmen-lorenzo-L.png" alt="carmen lorenzo" />
+          <picture>
+            <source
+              srcset="images/carmen-lorenzo-L.png"
+              media="(min-width: 1024px)"
+            />
+            <source
+              srcset="images/carmen-lorenzo-M.png"
+              media="(min-width: 780px)"
+            />
+            <source
+              srcset="images/carmen-lorenzo-S.png"
+              media="(min-width: 320px)"
+            />
+            <img src="images/carmen-lorenzo-L.png" alt="responsive pic" />
+          </picture>
           <p>
             Traveling From: Madrid, Spain “Live, laugh, love-- everything you
             need in Majorca.”
@@ -299,7 +363,6 @@
               d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
             />
           </svg>
-
           <p>Location: Mediterranean</p>
         </article>
         <article>
@@ -329,10 +392,12 @@
       <section id="contact-us">
         <h2>Contact Us</h2>
         <form>
-          <label for="name">First Name<span class="required">*</span></label>
-          <input type="text" id="name" name="name" required />
-          <label for="name">Last Name<span class="required">*</span></label>
-          <input type="text" id="name" name="name" required />
+          <label for="firstName"
+            >First Name<span class="required">*</span></label
+          >
+          <input type="text" id="firstName" name="firstName" required />
+          <label for="lastName">Last Name<span class="required">*</span></label>
+          <input type="text" id="lastName" name="lastName" required />
           <label for="email">Email<span class="required">*</span></label>
           <input type="text" id="email" name="email" />
           <label for="phone">Phone<span class="required">*</span></label>
