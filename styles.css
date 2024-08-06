@@ -183,6 +183,11 @@ header img {
   grid-column: 1;
 }
 
+header p {
+  font-size: 1.5em;
+  padding-left: 1.5em;
+}
+
 /* Hamburger Menu */
 
 nav {
@@ -193,4 +198,37 @@ nav {
 
 #menu-toggle label {
   display: inline-block;
+}
+
+h1 {
+  font-size: 4em;
+  padding-left: 0.5em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 250;
+  padding-left: 1em;
+}
+
+#intro p {
+  padding-left: 2em;
+}
+
+#img-grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+#img-grid img {
+  padding-top: 0.5em;
+}
+
+#img-grid:last-child {
+  padding-bottom: 1em;
+}
+
+#plan {
+  background-color: var(--yellow);
 }
