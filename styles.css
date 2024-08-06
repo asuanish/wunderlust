@@ -1,8 +1,10 @@
 /* Anish Joglekar */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html,
 body,
 div,
@@ -93,6 +95,7 @@ video {
 }
 
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -166,4 +169,28 @@ form {
 #skip,
 .sr-only {
   overflow: hidden;
+  position: absolute;
+  left: -10000px;
+}
+
+header {
+  display: grid;
+  background-image: linear-gradient(var(--teal), var(--white));
+}
+
+header img {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+/* Hamburger Menu */
+
+nav {
+  margin-top: auto;
+  grid-row: 1;
+  grid-column: 1;
+}
+
+#menu-toggle label {
+  display: inline-block;
 }
