@@ -283,3 +283,32 @@ h3 {
   max-width: 250px;
   padding-bottom: 1em;
 }
+
+#about {
+  background-color: var(--blue);
+}
+
+#about div {
+  background-color: var(--blue);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+#about h4 {
+  font-weight: bold;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+#about p {
+  font-style: italic;
+}
+
+#about section {
+  text-align: center;
+  justify-items: center;
+  padding-bottom: 1em;
+}
