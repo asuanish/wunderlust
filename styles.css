@@ -268,3 +268,18 @@ h3 {
   padding-bottom: 1em;
   background-color: var(--teal);
 }
+
+#testimonials h4 {
+  font-weight: bold;
+  font-size: x-large;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+#testimonials section {
+  display: block;
+  text-align: center;
+  margin: auto;
+  max-width: 250px;
+  padding-bottom: 1em;
+}
