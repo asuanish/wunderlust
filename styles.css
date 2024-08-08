@@ -312,3 +312,42 @@ h3 {
   justify-items: center;
   padding-bottom: 1em;
 }
+
+#contact {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+form {
+  display: block;
+  padding-left: 2em;
+  max-width: 250px;
+}
+
+form .required {
+  color: var(--purple);
+  display: inline-block;
+  font-size: small;
+}
+
+.form-required {
+  font-family: "Montserrat";
+  font-size: 0.75em;
+  font-weight: 100;
+  font-style: italic;
+}
+
+input {
+  border-color: var(--purple);
+}
+
+label,
+legend {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* fieldset label {
+  display: inline-block;
+  text-align: center;
+} */
