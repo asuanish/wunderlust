@@ -321,7 +321,6 @@ h3 {
 form {
   display: block;
   padding-left: 2em;
-  max-width: 250px;
 }
 
 form .required {
@@ -337,17 +336,43 @@ form .required {
   font-style: italic;
 }
 
-input {
+input,
+label,
+fieldset,
+select {
+  display: block;
+  width: 90%;
+}
+
+input,
+select {
+  margin-bottom: 1.5em;
+  height: 3em;
   border-color: var(--purple);
+}
+
+legend {
+  padding-bottom: 0.5em;
 }
 
 label,
 legend {
-  font-weight: 500;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
-/* fieldset label {
+fieldset label {
   display: inline-block;
+  width: 80px;
+  text-transform: none;
+  font-weight: 300;
   text-align: center;
-} */
+  padding-bottom: 0.5em;
+}
+
+#mySubmit {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  background-color: var(--purple);
+  color: var(--white);
+}
