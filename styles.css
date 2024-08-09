@@ -541,12 +541,26 @@ footer a {
     margin-left: 1em;
   }
 
-  #plan-svg {
+  #plan div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     max-width: 700px;
     margin: 0 auto;
+  }
+
+  #plan section {
+    display: block;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+    border: solid var(--white);
+    background-color: var(--teal);
+    width: 300px;
+    height: 300px;
+    margin: 1em;
+    border-radius: 10px;
+    align-content: center;
+    text-align: center;
   }
 
   #testimonials div {
@@ -589,7 +603,7 @@ footer a {
     font-weight: 600;
   }
 
-  #plan-svg {
+  #plan div {
     display: flex;
     flex-direction: row;
     max-width: 1250px;
