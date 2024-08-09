@@ -5,6 +5,8 @@
    License: none (public domain)
 */
 
+@import url(https://fonts.google.com/share?selection.family=Molle:ital@1|Montserrat);
+
 html,
 body,
 div,
@@ -94,8 +96,6 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -136,8 +136,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-@import url(https://fonts.google.com/share?selection.family=Molle:ital@1|Montserrat);
 
 h1,
 h2,
@@ -190,8 +188,6 @@ header p {
   grid-row: 3;
 }
 
-/* Hamburger Menu */
-
 nav {
   grid-column: 2;
   grid-row: 1;
@@ -205,7 +201,11 @@ nav a {
 }
 
 nav li {
-  margin-top: 0.2em;
+  background-color: var(--teal);
+  border: 1px solid var(--black);
+  padding: 2em;
+  text-align: center;
+  margin-left: 0.5em;
 }
 
 #menu-toggle label {
@@ -225,10 +225,22 @@ nav li {
   color: var(--dark-gray);
 }
 
+#menu-toggle a:hover {
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
 [type="checkbox"] {
   width: 1px;
   height: 1px;
-  visibility: hidden;
+}
+
+input#toggle ~ ul {
+  display: none;
+}
+
+input#toggle:checked ~ ul {
+  display: block;
 }
 
 h1 {
@@ -253,14 +265,15 @@ h3 {
 
 #intro p {
   padding-left: 2em;
+  padding-right: 2em;
 }
 
 #img-grid {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
 }
 
 #img-grid img {
@@ -424,3 +437,529 @@ footer a {
   padding-bottom: 0.5em;
   font-weight: 100;
 }
+
+@media screen and (min-width: 600px) {
+  input[type="checkbox"],
+  #menu-toggle label {
+    max-width: 1px;
+    max-height: 1px;
+    visibility: hidden;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  header img {
+    width: 100%;
+    max-width: fit-content;
+    min-width: 100px;
+  }
+
+  h1 {
+    font-size: 4em;
+    grid-column: 2;
+    grid-row: 1;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+  header p {
+    font-size: 1em;
+    margin: 0;
+    grid-column: 2/4;
+    grid-row: 2;
+    padding-left: 0;
+  }
+
+  nav {
+    grid-column: 1/4;
+    grid-row: 3;
+    margin: 0 auto;
+    font-weight: 600;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  ul,
+  input#toggle ~ ul {
+    display: block;
+    min-width: 668px;
+  }
+
+  nav li {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--white);
+    border: none;
+  }
+
+  nav a {
+    color: var(--dark-gray);
+    background-color: var(--white);
+    padding: 0.5em;
+    margin-top: 0;
+  }
+
+  nav li:hover {
+    background-color: var(--yellow);
+  }
+
+  nav a:hover {
+    background-color: var(--yellow);
+  }
+
+  #img-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    max-width: 974px;
+    margin: 0 auto;
+  }
+
+  #img-grid img:first-of-type {
+    grid-row: 1;
+    grid-column: 1;
+    width: 98%;
+  }
+
+  #img-grid img:nth-of-type(2) {
+    grid-row: 1;
+    grid-column: 2;
+    width: 98%;
+  }
+
+  #img-grid picture {
+    grid-row: 2;
+    grid-column: span 2;
+    width: 100%;
+    margin-left: 1em;
+  }
+
+  #plan-svg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  #testimonials div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.5em;
+    font-size: 90%;
+    justify-items: center;
+    align-items: center;
+  }
+
+  #about div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1.3em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    max-width: 700px;
+  }
+
+  #mySubmit {
+    max-width: 200px;
+  }
+}
+
+@media screen and (min-width: 999px) {
+  header {
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  nav {
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+
+  #plan-svg {
+    display: flex;
+    flex-direction: row;
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+
+  #testimonials div {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: auto;
+    max-width: 1019px;
+  }
+
+  #names {
+    grid-column: 1;
+  }
+
+  #selects,
+  #mySubmit {
+    grid-column: 3;
+  }
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Montserrat&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+h1, h2, h3 {
+  font-family: "Molle";
+}
+
+h4, p, q, small, nav, button, form {
+  font-family: "Montserrat";
+}
+
+:root {
+  --yellow: #f6d64a;
+  --teal: #55bcd5;
+  --purple: #9b26b0;
+  --blue: #499bd2;
+  --dark-gray: #222222;
+  --light-gray: #eaeaea;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+
+#skip, .sr-only {
+  overflow: hidden;
+  position: absolute;
+  left: -10000px;
+}
+
+
+header {
+  display: grid;
+  background-image: linear-gradient(var(--teal), var(--white));
+}
+
+header img {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+header p {
+  font-size: 1.3em;
+  padding-left: 1.5em;
+  grid-column: span 2;
+  grid-row: 3;
+}
+
+
+nav {
+  grid-column: 2;
+  grid-row: 1;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav li {
+  margin-top: 0.2em;
+}
+
+
+#menu-toggle label {
+  background-color: var(--yellow);
+  display: block;
+  width: 10em;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 200;
+  padding: 1em 0;
+}
+
+#menu-toggle a {
+  text-decoration: none;
+  text-align: center;
+  color: var(--dark-gray);
+}
+
+#menu-toggle a:hover {
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+[type="checkbox"] {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+
+h1 {
+  font-size: 3em;
+  padding: 0.5em 0 0 0.7em;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 250;
+  padding: 0.5em 0 0 1em;
+}
+
+h3 {
+  font-size: 2em;
+  padding: 0.5em 0 1em 1em;
+}
+
+
+#intro p {
+  padding: 0 2em;
+}
+
+
+#img-grid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+}
+
+#img-grid img {
+  padding-top: 0.5em;
+}
+
+#img-grid:last-child {
+  padding-bottom: 1em;
+}
+
+
+#plan {
+  padding-bottom: 1em;
+  background-color: var(--yellow);
+}
+
+#plan h4 {
+  padding: 0.5em 0;
+  font-size: large;
+}
+
+#plan section {
+  display: block;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  border: solid var(--white);
+  background-color: var(--teal);
+  max-width: 300px;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#plan img {
+  padding-bottom: 1em;
+  background-color: var(--teal);
+}
+
+
+#testimonials h4 {
+  font-weight: bold;
+  font-size: x-large;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+#testimonials section {
+  display: block;
+  text-align: center;
+  margin: auto;
+  max-width: 250px;
+  padding-bottom: 1em;
+}
+
+
+#about {
+  background-color: var(--blue);
+}
+
+#about div {
+  background-color: var(--blue);
+  padding: 1em 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+#about h4 {
+  font-weight: bold;
+  padding: 0.5em 0;
+}
+
+#about p {
+  font-style: italic;
+}
+
+#about section {
+  text-align: center;
+  justify-items: center;
+  padding-bottom: 1em;
+}
+
+#contact {
+  padding: 1em 0;
+}
+
+
+form {
+  display: block;
+  padding-left: 2em;
+}
+
+form .required {
+  color: var(--purple);
+  display: inline-block;
+  font-size: small;
+}
+
+.form-required {
+  font-family: "Montserrat";
+  font-size: 0.75em;
+  font-weight: 100;
+  font-style: italic;
+}
+
+input, label, fieldset, select {
+  display: block;
+  width: 90%;
+}
+
+input, select {
+  margin-bottom: 1.5em;
+  height: 3em;
+  border-color: var(--purple);
+}
+
+legend {
+  padding-bottom: 0.5em;
+}
+
+label, legend {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+fieldset label {
+  display: inline-block;
+  width: 80px;
+  text-transform: none;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+#mySubmit {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+footer {
+  background-color: var(--light-gray);
+  text-align: center;
+  padding: 1em 0;
+}
+
+footer a {
+  display: block;
+  font-family: "Montserrat";
+  color: var(--dark-gray);
+  text-decoration: none;
+  padding: 0.5em 0;
+  font-weight: 100;
+}
+
+@media screen and (min-width: 600px) {
+  input[type="checkbox"], #menu-toggle label {
+    max-width: 1px;
+    max-height: 1px;
+    visibility: hidden;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  header img {
+    width: 100%;
+    min-width: 100px;
+  }
+
+  h1 {
+    font-size: 4em;
+  } */
